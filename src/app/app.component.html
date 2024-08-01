@@ -81,16 +81,16 @@
 
 =========================NGFORENDING========
         <!--  <tag (event)=”method( )”> </tag> -->
-          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <form (ngSubmit)="onSubmit(d)" #d="ngForm">
 
 
-              <label for="username"> UserName</label>
+              <label for="username" class="form-control"> UserName</label>
               <input type="text" name="username" class="form-control" ngModel>
 
 
               <br>
 
-              <label for="email">Email</label>
+              <label for="email" class="form-control">Email</label>
               <input type="text" name="email" class="form-control" ngModel>
               <br>
               <label for="secret">Secret Question</label>
@@ -100,8 +100,8 @@
                 <option value="hero"> Your First Hero</option>
                 <option value="school"> Your First School</option>
               </select>
-              <label for="answer">Big Textbox</label>
-              <textarea name="answer" id="answer"  rows="3" ngModel class="form-control"></textarea>
+              <label for="answer" class="form-control">Big Textbox</label>
+              <textarea name="answer" id="answer"  rows="6" ngModel class="form-control"></textarea>
 
               <br>
 
@@ -112,11 +112,19 @@
 
                   <input type="radio" name="gender" ngModel [value]="gender"> {{gender}}
                 </label>
-
+Your
 
               </div>
 
-
+              <input
+              type="checkbox"
+              name ="chkvalue"
+              ngModel
+              >
+              <label for="chkvalue" class="form-check-label"
+              >I have read and agree to the Terms</label
+            >
+            />
               <br>
               <button class="btn btn-primary" type="submit" >Submit</button>
 
